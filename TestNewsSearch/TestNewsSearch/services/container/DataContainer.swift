@@ -15,15 +15,24 @@ protocol IDataContainer {
 }
 
 class DataContainer: IDataContainer {
+    var _favoriteDao: FavoriteProvider?
+    var _searchDao: SearchProvider?
+    
     var favoriteDao: FavoriteProvider {
         get {
-            return FavoriteProvider()
+            if (_favoriteDao == nil){
+                _favoriteDao = FavoriteProvider()
+            }
+            return _favoriteDao!
         }
     }
-
+    
     var searchDao: SearchProvider {
         get {
-            return SearchProvider()
+            if (_searchDao == null){
+                _searchDao = SearchProvider()
+            }
+            return _searchDao!
         }
     }
 }

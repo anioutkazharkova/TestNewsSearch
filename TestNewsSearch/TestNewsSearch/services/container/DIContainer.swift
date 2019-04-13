@@ -14,16 +14,20 @@ protocol IDIContainer {
 }
 
 class DIContainer: IDIContainer {
-
-    var networkConfiguration: INetworkConfiguration {
-        get {
-            return NetworkConfiguration()
-        }
-    }
-
+    private var _networkService: INetworkService?
+    private var _networkConfig: INetworkConfiguration?
+    
     var networkService: INetworkService {
-        get {
-            return NetworkService(networkConfiguration: networkConfiguration)
+        if (_networkService == nil) {
+            _networkService = NetworkService(networkConfiguration: DI.container.networkConfig)
         }
+        return _networkService!
+    }
+    
+    var networkConfig: INetworkConfiguration {
+        if (_networkConfig == nil ) {
+            _networkConfig = NetworkConfiguration()
+        }
+        return _networkConfig!
     }
 }

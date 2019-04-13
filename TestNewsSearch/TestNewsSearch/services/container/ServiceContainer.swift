@@ -14,9 +14,14 @@ protocol  IServiceContainer {
 }
 
 class  ServiceContainer: IServiceContainer {
+    var _newsService: INewsService?
+    
     var newsService: INewsService {
         get {
-            return NewsService(networkService: DI.container.networkService)
+            if (_newsService == nil){
+                _newsService = NewsService(networkService: DI.container.networkService)
+            }
+            return _newsService!
         }
     }
 }
