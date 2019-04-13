@@ -19,12 +19,12 @@ class DIContainer: IDIContainer {
     
     var networkService: INetworkService {
         if (_networkService == nil) {
-            _networkService = NetworkService(networkConfiguration: DI.container.networkConfig)
+            _networkService = NetworkService(networkConfiguration: DI.container.networkConfiguration)
         }
         return _networkService!
     }
     
-    var networkConfig: INetworkConfiguration {
+    var networkConfiguration: INetworkConfiguration {
         if (_networkConfig == nil ) {
             _networkConfig = NetworkConfiguration()
         }

@@ -29,7 +29,7 @@ class DataContainer: IDataContainer {
     
     var searchDao: SearchProvider {
         get {
-            if (_searchDao == null){
+            if (_searchDao == nil){
                 _searchDao = SearchProvider()
             }
             return _searchDao!
