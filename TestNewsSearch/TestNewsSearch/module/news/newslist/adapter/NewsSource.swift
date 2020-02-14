@@ -63,7 +63,7 @@ class NewsSource: NSObject, UICollectionViewDelegateFlowLayout, UICollectionView
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width / (isHorizontal ? 2 : 1) - 20
-        let height: CGFloat = 130.0
+        let height: CGFloat = 150.0
 
         return CGSize(width: width, height: height)
 

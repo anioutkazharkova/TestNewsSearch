@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,6 +42,8 @@
 		635529EA221F27B700514DF0 /* ISearchProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635529E9221F27B700514DF0 /* ISearchProvider.swift */; };
 		635529EC221F280600514DF0 /* SearchProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635529EB221F280600514DF0 /* SearchProvider.swift */; };
 		635529EE221F3FF000514DF0 /* String + Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635529ED221F3FF000514DF0 /* String + Date.swift */; };
+		636DC66B23F6DAC600A1B893 /* UIImage+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636DC66A23F6DAC600A1B893 /* UIImage+Crop.swift */; };
+		636DC66D23F6DADE00A1B893 /* CroppedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636DC66C23F6DADE00A1B893 /* CroppedImageView.swift */; };
 		637D3B8922202F6300601DC4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637D3B8822202F6300601DC4 /* BaseViewController.swift */; };
 		637D3B8B222031DE00601DC4 /* IView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637D3B8A222031DE00601DC4 /* IView.swift */; };
 		637D3B8E222035F700601DC4 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637D3B8D222035F700601DC4 /* ImageManager.swift */; };
@@ -114,6 +116,8 @@
 		635529E9221F27B700514DF0 /* ISearchProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISearchProvider.swift; sourceTree = "<group>"; };
 		635529EB221F280600514DF0 /* SearchProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchProvider.swift; path = TestNewsSearch/services/dbprovider/searchdao/SearchProvider.swift; sourceTree = SOURCE_ROOT; };
 		635529ED221F3FF000514DF0 /* String + Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Date.swift"; sourceTree = "<group>"; };
+		636DC66A23F6DAC600A1B893 /* UIImage+Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Crop.swift"; sourceTree = "<group>"; };
+		636DC66C23F6DADE00A1B893 /* CroppedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CroppedImageView.swift; sourceTree = "<group>"; };
 		637D3B8822202F6300601DC4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		637D3B8A222031DE00601DC4 /* IView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IView.swift; sourceTree = "<group>"; };
 		637D3B8D222035F700601DC4 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
@@ -441,6 +445,8 @@
 			isa = PBXGroup;
 			children = (
 				63C0FE04221C674500AE0AD1 /* RefreshableCollectionView.swift */,
+				636DC66A23F6DAC600A1B893 /* UIImage+Crop.swift */,
+				636DC66C23F6DADE00A1B893 /* CroppedImageView.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -712,30 +718,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TestNewsSearch/Pods-TestNewsSearch-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-TestNewsSearch/Pods-TestNewsSearch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-TestNewsSearch/Pods-TestNewsSearch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestNewsSearch/Pods-TestNewsSearch-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestNewsSearch/Pods-TestNewsSearch-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -782,6 +773,7 @@
 				63C0FDEA221C49A800AE0AD1 /* INetworkConfiguration.swift in Sources */,
 				635529C0221DE9D700514DF0 /* DataContainer.swift in Sources */,
 				635529A7221DB78000514DF0 /* NewsItemPresenter.swift in Sources */,
+				636DC66D23F6DADE00A1B893 /* CroppedImageView.swift in Sources */,
 				63C0FDF0221C49A800AE0AD1 /* INewsService.swift in Sources */,
 				63C0FDEC221C49A800AE0AD1 /* NetworkConfiguration.swift in Sources */,
 				63C0FDE1221C49A800AE0AD1 /* NewsItem.swift in Sources */,
@@ -798,6 +790,7 @@
 				635529E0221F219100514DF0 /* SearchSource.swift in Sources */,
 				635529D0221F0A4400514DF0 /* FavoriteConfigurator.swift in Sources */,
 				63C0FE09221C6BF200AE0AD1 /* TableOwner.swift in Sources */,
+				636DC66B23F6DAC600A1B893 /* UIImage+Crop.swift in Sources */,
 				63C0FE05221C674500AE0AD1 /* RefreshableCollectionView.swift in Sources */,
 				63C0FDFF221C53E800AE0AD1 /* INewsPresenter.swift in Sources */,
 				63C0FE01221C541000AE0AD1 /* NewsPresenter.swift in Sources */,
